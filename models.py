@@ -6,7 +6,6 @@ from app.core.models import DTMixin
 from app.core.utils import model_str
 
 from app.settings import settings as s
-from app.AuthControl.models import UserDB
 
 
 class UserPermissions(DTMixin, models.Model):
@@ -113,21 +112,6 @@ class UniqueFieldsRegistration(BaseModel):
     email: Optional[EmailStr]
     username: Optional[str] = Field(None, min_length=s.USERNAME_LEN)
     password: Optional[str] = Field(None, min_length=s.PASSWORD_LEN)
-
-
-class OptionCreate(BaseModel):
-    name: str
-    value: str
-    user: Optional[UserDB]
-
-class OptionUpdate(BaseModel):
-    id: int
-    value: str
-    user: Optional[UserDB]
-    
-class OptionDelete(BaseModel):
-    id: int
-    user: Optional[UserDB]
 
 # class Category(Taxonomy):
 #     author = fields.ForeignKeyField('models.User', on_delete=fields.CASCADE,
