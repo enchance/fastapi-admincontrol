@@ -71,20 +71,6 @@ class GroupPermissions(models.Model):
         return f'<{self.__class__.__name__}[{self.id}]>'    # noqa
 
 
-class Option(models.Model):
-    name = fields.CharField(max_length=20)
-    value = fields.CharField(max_length=191)
-    user = fields.ForeignKeyField('models.UserMod', related_name='options', null=True)
-    is_active = fields.BooleanField(default=True)
-    updated_at = fields.DatetimeField(auto_now=True)
-    
-    class Meta:
-        table = 'core_options'
-    
-    def __str__(self):
-        return model_str(self, 'name')
-
-
 class Taxonomy(DTMixin, models.Model):
     name = fields.CharField(max_length=191)
     type = fields.CharField(max_length=20)
