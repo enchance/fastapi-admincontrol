@@ -1,7 +1,7 @@
 from typing import Optional
 from tortoise import fields, models
 from pydantic import BaseModel, EmailStr, Field
-from core.utils import model_str
+from app.core.utils import model_str
 
 from app.settings import settings as s
 from app.AuthControl.models import UserDB
