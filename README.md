@@ -1,6 +1,6 @@
-# AuthControl for FastAPI Users
+# AdminControl for FastAPI Users
 
-A drop-in admin implementation to used with FastAPI Users and AuthControl.
+A drop-in admin implementation to be used with the FastAPI Users and AuthControl packages.
 
 ## Description
 
