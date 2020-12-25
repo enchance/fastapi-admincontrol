@@ -125,12 +125,14 @@ class OptionCreate(BaseModel):
     value: str
     user: Optional[UserDB]
 
-
 class OptionUpdate(BaseModel):
     id: int
     value: str
     user: Optional[UserDB]
-
+    
+class OptionDelete(BaseModel):
+    id: int
+    user: Optional[UserDB]
 
 # class Category(Taxonomy):
 #     author = fields.ForeignKeyField('models.User', on_delete=fields.CASCADE,
